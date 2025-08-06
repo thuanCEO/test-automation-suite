@@ -10,7 +10,7 @@
     "tsCucumber": "npx cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts src/features/",
     "test:report": "playwright test && playwright show-report",
     "start": "npm run build & playwright test && playwright show-report",
-    "ciGit": "npx playwright test || exit_code=$?; npx playwright generate-report; exit $exit_code"
+    "ciGit": "cd test-ui/playwright & npx playwright test || exit_code=$?; npx playwright generate-report; exit $exit_code"
   },
   "keywords": [],
   "author": "",
