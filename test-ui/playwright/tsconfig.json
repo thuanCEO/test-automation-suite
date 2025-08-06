@@ -1,0 +1,57 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "outDir": "dist",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@enums/*": [
+                "src/enums/*"
+            ],
+            "@elements/*": [
+                "src/elements/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@config/*": [
+                "config/*"
+            ],
+            "@features/*": [
+                "src/features/*"
+            ],
+            "@support/*": [
+                "src/support/*"
+            ],
+            "@contants/*": [
+                "src/constants/*"
+            ],
+            "@iElements/*": [
+                "src/elements/interfaces/*"
+            ],
+            "@helpers/*": [
+                "src/helpers/*"
+            ],
+            "@resources/*": [
+                "src/resources/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
