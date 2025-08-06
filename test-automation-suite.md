@@ -1,53 +1,53 @@
 test-automation-suite/
 │
-├── README.md                     # Giới thiệu project, cách chạy từng phần
+├── README.md                      # Giới thiệu project, cách chạy từng phần
 ├── .gitignore
-├── pom.xml / package.json       # Quản lý dependencies (Java/Node)
+├── pom.xml / package.json         # Quản lý dependencies (Java/Node)
 │
-├── config/                      # Thư mục chứa config chung
-│   ├── env/                     # Cấu hình môi trường test
+├── config/                        # Thư mục chứa config chung
+│   ├── env/                       # Cấu hình môi trường test
 │   └── global.properties
 │
-├── reports/                     # Thư mục chứa báo cáo test (allure, html, etc.)
+├── reports/                       # Thư mục chứa báo cáo test (Allure, HTML, etc.)
 │
-├── tools/                       # Script tiện ích (convert data, DB tool, ...)
+├── tools/                         # Scripts tiện ích (convert data, DB tool, ...)
 │
-├── test-ui/
-│   ├── selenium/                # Selenium tests
+├── test-ui/                       # Kiểm thử giao diện (UI Tests)
+│   ├── selenium/                  # Selenium tests
 │   │   ├── tests/
 │   │   ├── pages/
 │   │   ├── drivers/
 │   │   └── pom.xml
-│   └── playwright/              # Playwright tests
+│   └── playwright/                # Playwright tests
 │       ├── tests/
 │       ├── pages/
 │       ├── locators/
 │       └── playwright.config.ts
 │
-├── test-api/
-│   ├── karate/                  # Karate tests
+├── test-api/                      # Kiểm thử API (REST)
+│   ├── karate/                    # Karate tests
 │   │   ├── features/
 │   │   ├── data/
 │   │   └── karate-config.js
-│   ├── postman/                 # Postman collections (Newman)
+│   ├── postman/                   # Postman collections (Newman)
 │   │   └── *.json
-│   └── rest-assured/            # REST Assured (Java)
+│   └── rest-assured/              # REST Assured (Java)
 │       ├── tests/
 │       └── pom.xml
 │
-├── test-performance/
-│   ├── jmeter/                  # Apache JMeter scripts
+├── test-performance/              # Kiểm thử hiệu năng (Performance)
+│   ├── jmeter/                    # Apache JMeter scripts
 │   │   └── *.jmx
-│   └── k6/                      # k6 scripts (JS)
+│   └── k6/                        # k6 scripts (JavaScript)
 │       └── *.js
 │
-├── test-mobile/
-│   ├── appium/                  # Appium tests
+├── test-mobile/                   # Kiểm thử mobile app
+│   ├── appium/                    # Appium tests
 │   │   ├── android/
 │   │   └── ios/
-│   └── maestro/                 # Maestro YAML scripts
+│   └── maestro/                   # Maestro YAML scripts
 │       └── *.yaml
 │
-└── .github/
-    └── workflows/              # GitHub Actions CI pipelines
-        └── run-tests.yml
+└── .github/                       # GitHub CI/CD
+    └── workflows/
+        └── run-tests.yml         # Pipeline CI chạy automation test
