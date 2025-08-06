@@ -1,16 +1,13 @@
 import { Page } from '@playwright/test';
-import { GetLocator } from '../../utils/GetLocator';
-import { orangeHrmUrl } from '../../utils/EnvConfig';
-import { PROJECT } from '../../config/Constants';
-import { ElementAction } from '../../elements/ElementAction'
-import { ElementBase } from '../../elements/ElementBase'
+import { GetLocator } from '@utils/GetLocator';
+import { orangeHrmUrl } from '@utils/EnvConfig';
+import { ElementBase } from '@elements/ElementBase'
 
 export class LoginPageHRM extends ElementBase {
 
     private usernameElement = this.factory.getLocator(GetLocator.getLocator(this.PAGENAME, 'usernameInput'));
     private passwordElement = this.factory.getLocator(GetLocator.getLocator(this.PAGENAME, 'passwordInput'));
     private loginElement = this.factory.getLocator(GetLocator.getLocator(this.PAGENAME, 'loginButton'));
-
 
     constructor(page: Page) {
         super(page);

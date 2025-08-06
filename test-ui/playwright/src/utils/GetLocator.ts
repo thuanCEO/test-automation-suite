@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { PlatForm } from '@contants/Platform';
-import { Project } from '@resources/Project';
 
 export class GetLocator {
     private static cache: Record<string, any> = {};
