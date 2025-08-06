@@ -64,4 +64,8 @@ jobs:
 
       - name: 📄 Show HTML report
         run: |
-          echo "📄 View report at: https://thuanceo.github.io/test-automation-suite/"
+          echo ""
+          echo "==========================================="
+          echo "✅ View the Playwright HTML Report at:"
+          echo "👉 https://thuanceo.github.io/test-automation-suite/"
+          echo "==========================================="
