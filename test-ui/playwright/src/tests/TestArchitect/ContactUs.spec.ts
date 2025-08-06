@@ -1,12 +1,12 @@
-import { test, expect } from '@playwright/test';
+import { test, BrowserContext, Page, expect } from '@playwright/test';
 import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
 import { ContactFormUs } from '../../pages/TestArchitect/ContactFormUs';
 import { SaveScreenshot } from '../../utils/SaveScreenshot';
-import { RegisterAccountTA } from '../../helpers/TestSetup';
-import ContactUsData from '../../data/TestArchitect/ContactUs.json';
+import { RegisterAccountTA } from '../TestArchitect/TA/TestSetup';
+import ContactUsData from '@resources/data/TestArchitect/ContactUs.json';
 
-let page;
-let context;
+let page: Page;
+let context: BrowserContext;
 let contactFormUsPage: ContactFormUs;
 let testArchitectPage: TestArchitectPage;
 
