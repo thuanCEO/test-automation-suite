@@ -1,0 +1,61 @@
+name: 🔎 Playwright Tests
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v3
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🧪 Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: 🚀 Run Playwright + Cucumber tests
+        id: run-tests
+        env:
+          TEST_ENV: dev
+        run: |
+          echo "Running tests in $TEST_ENV environment"
+          npm run ciGit
+          echo "exit_code=$?" >> $GITHUB_ENV
+
+      - name: 📤 Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+
+      - name: ✅ Check test result
+        if: always()
+        run: |
+          if [ "${{ steps.run-tests.outputs.exit_code }}" -eq 0 ]; then
+            echo "✅ Tests PASSED"
+          else
+            echo "❌ Tests FAILED"
+            exit 1  # Nếu bạn muốn báo đỏ ở cuối
+          fi
+          
+      - name: 📤 Deploy Playwright Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./playwright-report

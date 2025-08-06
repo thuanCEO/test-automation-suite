@@ -1,24 +1,25 @@
 import { defineConfig } from '@playwright/test';
-import { TIMEOUT, REPORTER, PLATFORM } from './src/config/Constants';
-import { DRIVERS_CONFIG } from './src/config/DriverConfig'
+import { TimeOut } from '../playwright/src/constants/TimeOut';
+import { Reporter } from '../playwright/src/constants/Reporter';
+import { DriverConfig } from '../playwright/src/config/DriverConfig';
 
 export default defineConfig({
-  testDir: DRIVERS_CONFIG.testDir,
-  timeout: TIMEOUT.XLONG,
-  retries: DRIVERS_CONFIG.retries,
-  workers: DRIVERS_CONFIG.workers,
+  testDir: DriverConfig.testDir,
+  timeout: TimeOut.XLONG,
+  retries: DriverConfig.retries,
+  workers: DriverConfig.workers,
   expect: {
-    timeout: TIMEOUT.DEFAULT,
+    timeout: TimeOut.DEFAULT,
   },
-  reporter: REPORTER.reporter,
-  name: DRIVERS_CONFIG.name,
+  reporter: Reporter.reporter,
+  name: DriverConfig.name,
   use: {
-    browserName: DRIVERS_CONFIG.browserName,
-    channel: DRIVERS_CONFIG.channel,
-    headless: DRIVERS_CONFIG.headless,
-    ignoreHTTPSErrors: DRIVERS_CONFIG.ignoreHTTPSErrors,
-    screenshot: DRIVERS_CONFIG.screenshot,
-    video: DRIVERS_CONFIG.video,
-    trace: DRIVERS_CONFIG.trace,
+    browserName: DriverConfig.browserName,
+    channel: DriverConfig.channel,
+    headless: DriverConfig.headless,
+    ignoreHTTPSErrors: DriverConfig.ignoreHTTPSErrors,
+    screenshot: DriverConfig.screenshot,
+    video: DriverConfig.video,
+    trace: DriverConfig.trace,
   }
 });
