@@ -1,6 +1,6 @@
 # 🔹 Web Automation
 | ✅ Framework/Tool   | Ưu điểm nổi bật                         | Khi nào dùng                                 |
-| ------------------    ---------------------------------------  ----------------------------------------------
+| ------------------ | --------------------------------------- | -------------------------------------------- |
 | ✅ **Playwright**   | Nhanh, auto-wait tốt, đa browser        | Dự án web hiện đại                           |
 | ✅ **Selenium**     | Phổ biến, đa ngôn ngữ, mạnh mẽ          | Dự án legacy, coverage rộng                  |
 | ✅ **Cypress**      | Dev-friendly, chạy nhanh trong browser  | SPA, team frontend viết test luôn            |
@@ -9,7 +9,7 @@
 
 # 🔹 API Automation
 | ✅ Framework/Tool       | Ưu điểm nổi bật                     | Khi nào dùng                             |
-| ----------------------    -----------------------------------    ----------------------------------------
+| ---------------------- | ----------------------------------- | ---------------------------------------- |
 | ✅ **Karate**           | DSL dễ viết, hỗ trợ UI + API test   | Viết test nhanh, không cần code phức tạp |
 | ✅ **Postman + Newman** | GUI thân thiện, dễ tích hợp CI      | Manual test + automation nhẹ nhàng       |
 | ❇️ **REST Assured**     | Java mạnh mẽ, assert chi tiết logic | Dự án backend viết bằng Java             |
