@@ -63,6 +63,7 @@ jobs:
           publish_dir: reports/playwright-report/
 
       - name: 📄 Show HTML report
+        if: always()
         run: |
           echo ""
           echo "==========================================="
