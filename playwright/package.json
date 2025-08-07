@@ -1,0 +1,29 @@
+{
+  "name": "playwright-learing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report",
+    "ccbTest": "npx cucumber-js",
+    "test:cucumber": "cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts",
+    "tsCucumber": "npx cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts src/features/",
+    "test:report": "playwright test && playwright show-report",
+    "start": "npm run build & playwright test && playwright show-report",
+    "ciGit": "cd test-ui/playwright & npx playwright test || exit_code=$?; npx playwright generate-report; exit $exit_code"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.54.1"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  }
+}
