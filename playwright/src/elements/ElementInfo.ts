@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-import { IElementInfo } from '@elements/interfaces/IElementInfo';
+import { IElementInfo } from '@interfaces/IElementInfo';
 import { TimeOut } from '@constants/TimeOut';
 
 export class ElementInfo implements IElementInfo {

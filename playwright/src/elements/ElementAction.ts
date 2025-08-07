@@ -1,5 +1,5 @@
 import { Locator, expect } from '@playwright/test';
-import { IElementAction } from '@elements/interfaces/IElementAction';
+import { IElementAction } from '@interfaces/IElementAction';
 import { TimeOut } from '@constants/TimeOut';
 
 export class ElementAction implements IElementAction {

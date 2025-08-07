@@ -15,6 +15,9 @@
             "@config/*": [
                 "src/config/*"
             ],
+            "@core/*": [
+                "src/core/*"
+            ],
             "@constants/*": [
                 "src/constants/*"
             ],
@@ -27,8 +30,11 @@
             "@helpers/*": [
                 "src/helpers/*"
             ],
+            "@interfaces/*": [
+                "src/interfaces/*"
+            ],
             "@services/*": [
-                "src/services/*"
+                "src/test-api/services/*"
             ],
             "@types/*": [
                 "src/types/*"
