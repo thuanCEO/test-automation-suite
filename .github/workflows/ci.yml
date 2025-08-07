@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: 📦 Install dependencies
-        run: cd playwright && npm ci
+        run: cd playwright && npm install @playwright/test && npm ci
 
       - name: 🧪 Install Playwright browsers
         run: npx playwright install --with-deps
