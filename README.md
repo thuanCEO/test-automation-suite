@@ -11,7 +11,7 @@ npx playwright test --project=test-api --grep="@UserAPI"
 npx playwright test --project=test-ui
 
 # Run playwright test-ui with @tag
-npx playwright test --project=test-api --grep="@LoginPageHRM"
+npx playwright test --project=test-ui --grep="@LoginPageHRM"
 
 
 # 🔹 Web Automation
