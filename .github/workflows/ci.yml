@@ -32,8 +32,10 @@ jobs:
         env:
           TEST_ENV: dev
         run: |
+          set -e
           echo "Running tests in $TEST_ENV environment"
-          npm run ciGit
+          npm run ciGitUI
+          npm run ciGitAPI
           exit_code=$?
           cd playwright
           echo "exit_code=$?" >> $GITHUB_ENV

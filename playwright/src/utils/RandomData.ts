@@ -1,9 +1,9 @@
-export const randomEmail = (): string => {
+export const RandomEmail = (): string => {
     const timestamp = Date.now();
     return `user${timestamp}@example.com`;
 };
 
-export const randomChar = (length: number = 40): string => {
+export const RandomChar = (length: number = 40): string => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -12,7 +12,7 @@ export const randomChar = (length: number = 40): string => {
     return result;
 };
 
-export const randomNumber = (length: number = 10): string => {
+export const RandomNumber = (length: number = 10): string => {
     const digits = '0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -21,7 +21,7 @@ export const randomNumber = (length: number = 10): string => {
     return result;
 };
 
-export const randomString = (length: number = 10): string => {
+export const RandomString = (length: number = 10): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -30,7 +30,7 @@ export const randomString = (length: number = 10): string => {
     return result;
 };
 
-export const randomPhoneNumber = (length: number = 10): string => {
+export const RandomPhoneNumber = (length: number = 10): string => {
     const digits = '0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -39,7 +39,7 @@ export const randomPhoneNumber = (length: number = 10): string => {
     return result;
 };
 
-export const randomText = (length: number = 20): string => {
+export const RandomText = (length: number = 20): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -48,7 +48,7 @@ export const randomText = (length: number = 20): string => {
     return result;
 };
 
-export const randomPassword = (length: number = 12): string => {
+export const RandomPassword = (length: number = 12): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -57,7 +57,7 @@ export const randomPassword = (length: number = 12): string => {
     return result;
 };
 
-export const randomAddress = (length: number = 20): string => {
+export const RandomAddress = (length: number = 20): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -66,7 +66,7 @@ export const randomAddress = (length: number = 20): string => {
     return result;
 };
 
-export const randomCity = (length: number = 10): string => {
+export const RandomCity = (length: number = 10): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     let result = '';
     for (let i = 0; i < length; i++) {
@@ -75,7 +75,7 @@ export const randomCity = (length: number = 10): string => {
     return result;
 };
 
-export const randomZipCode = (length: number = 5): string => {
+export const RandomZipCode = (length: number = 5): string => {
     const digits = '0123456789';
     let result = '';
     for (let i = 0; i < length; i++) {

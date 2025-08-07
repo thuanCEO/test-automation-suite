@@ -1,7 +1,10 @@
 export interface IUser {
-    id: string;
-    name: string;
-    email: string;
-    createdAt?: string;
-    avatar?: string;
+    userId: string;
+    userName: string;
+    userAddress: string;
+    userPhone: string;
+    userEmail: string;
+    userSubject: Record<string, any>;
+    isActive: boolean;
+    userBir: number;
 }
