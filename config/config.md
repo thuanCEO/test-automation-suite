@@ -1,1 +1,0 @@
-# Thư mục chứa config chung

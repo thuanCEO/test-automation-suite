@@ -1,7 +1,6 @@
 import { BrowserEnum, BrowserChannelEnum, BrowserNameEnum } from '@enums/BrowserEnum';
 
 export const DriverConfig = {
-    testDir: './src/test-ui/tests',
     ignoreHTTPSErrors: true,
     headless: true,
     retries: 0,

@@ -1,5 +1,5 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { IWaiter } from '@elements/interfaces//IWaiter';
+import { IWaiter } from '@interfaces/IWaiter';
 import { TimeOut } from '@constants/TimeOut';
 
 export class ElementWaiter implements IWaiter {
