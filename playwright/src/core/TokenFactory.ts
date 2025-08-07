@@ -18,8 +18,8 @@ export class TokenFactory {
             expiredAt: overrides.expiredAt ?? now + 60 * 60 * 1000,
             tokenType: overrides.tokenType ?? TokenTypeEnums.Bearer,
             scope: overrides.scope ?? ['read'],
-            userId: overrides.userId ?? `${userType}_001`,
-            username: overrides.username ?? `user_${userType}`,
+            userId: overrides.userId ?? `${userType}`,
+            username: overrides.username ?? `${userType}`,
             roles: overrides.roles ?? [userType],
             ...overrides,
         };

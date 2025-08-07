@@ -4,7 +4,6 @@ import { Reporter } from '../playwright/src/constants/Reporter';
 import { DriverConfig } from '../playwright/src/config/DriverConfig';
 
 export default defineConfig({
-  testDir: DriverConfig.testDir,
   timeout: TimeOut.XLONG,
   retries: DriverConfig.retries,
   workers: DriverConfig.workers,
@@ -13,13 +12,24 @@ export default defineConfig({
   },
   reporter: Reporter.reporter,
   name: DriverConfig.name,
-  use: {
-    browserName: DriverConfig.browserName,
-    channel: DriverConfig.channel,
-    headless: DriverConfig.headless,
-    ignoreHTTPSErrors: DriverConfig.ignoreHTTPSErrors,
-    screenshot: DriverConfig.screenshot,
-    video: DriverConfig.video,
-    trace: DriverConfig.trace,
-  }
+  projects: [
+    {
+      name: 'test-ui',
+      testDir: './src/test-ui/tests',
+      use: {
+        browserName: DriverConfig.browserName,
+        channel: DriverConfig.channel,
+        headless: DriverConfig.headless,
+        ignoreHTTPSErrors: DriverConfig.ignoreHTTPSErrors,
+        screenshot: DriverConfig.screenshot,
+        video: DriverConfig.video,
+        trace: DriverConfig.trace,
+      },
+    },
+    {
+      name: 'test-api',
+      testDir: './src/test-api/tests',
+      use: {},
+    }
+  ],
 });
