@@ -2,7 +2,7 @@ import fs from 'fs';
 
 const currentEnv = process.env.NODE_ENV || 'dev_en';
 
-const envPath = require('path').resolve(__dirname, '../resources/ConfigUrl.json');
+const envPath = require('path').resolve(__dirname, '../test-ui/resources/ConfigUrl.json');
 const env = JSON.parse(fs.readFileSync(envPath, 'utf-8'));
 
 

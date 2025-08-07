@@ -7,7 +7,7 @@ export class DataLoader {
 
     public static loadFileNameData(filename: string): any {
         const envLang = `${PlatForm.environment}_${PlatForm.language}`;
-        const startDir = path.resolve(__dirname, '../resources');
+        const startDir = path.resolve(__dirname, '../test-ui/resources');
         const filePath = this.findFileRecursive(startDir, filename);
 
         if (!filePath) {
@@ -23,7 +23,7 @@ export class DataLoader {
 
     public static loadFileName(filename: string): any {
         const envLang = `${PlatForm.environment}_${PlatForm.language}`;
-        const fullPath = path.resolve(__dirname, '../resources/testdata', envLang, Project.Project, filename);
+        const fullPath = path.resolve(__dirname, '../test-ui/resources/testdata', envLang, Project.Project, filename);
 
         if (!fs.existsSync(fullPath)) {
             throw new Error(`Test data not found: ${fullPath}`);

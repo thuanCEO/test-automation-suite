@@ -6,10 +6,11 @@
     "test": "playwright test",
     "report": "playwright show-report",
     "ccbTest": "npx cucumber-js",
+    "build": "tsc -p playwright/tsconfig.json",
     "test:cucumber": "cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts",
     "tsCucumber": "npx cucumber-js --require-module ts-node/register --require src/step-definitions/**/*.ts src/features/",
     "test:report": "playwright test && playwright show-report",
-    "start": "npm run build & playwright test && playwright show-report",
+    "start": "playwright test && playwright show-report",
     "ciGit": "cd test-ui/playwright & npx playwright test || exit_code=$?; npx playwright generate-report; exit $exit_code"
   },
   "keywords": [],
