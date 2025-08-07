@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
-import { testArchitectUrl } from '../../utils/EnvConfig';
-import { ArchitectLocators } from '../../locators/TestArchitect/TestArchitectPage.locator';
+import { testArchitectUrl } from '@utils/EnvConfig';
+import { ArchitectLocators } from '@testUI/locators/TestArchitect/TestArchitectPage.locator';
 import { ContactFormUs } from './ContactFormUs';
 import { ShopPage } from './ShopPage';
 import { BlogPage } from './BlogPage';

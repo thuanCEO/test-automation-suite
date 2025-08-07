@@ -1,10 +1,10 @@
 import { BrowserEnum, BrowserChannelEnum, BrowserNameEnum } from '@enums/BrowserEnum';
 
 export const DriverConfig = {
-    testDir: './src/tests',
+    testDir: './src/test-ui/tests',
     ignoreHTTPSErrors: true,
     headless: true,
-    retries: 1,
+    retries: 0,
     workers: 1,
     name: BrowserNameEnum.CHROMIUM,
     browserName: BrowserEnum.CHROMIUM as const,

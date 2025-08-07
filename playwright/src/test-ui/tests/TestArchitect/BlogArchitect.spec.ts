@@ -1,9 +1,9 @@
 import { test, BrowserContext, Page, expect } from '@playwright/test';
-import { TestArchitectPage } from '../../pages/TestArchitect/ArchitectPages';
-import { BlogPage } from '../../pages/TestArchitect/BlogPage';
+import { TestArchitectPage } from '@testUI/pages/TestArchitect/ArchitectPages';
+import { BlogPage } from '@testUI/pages/TestArchitect/BlogPage';
 import { SaveScreenshot } from '@utils/SaveScreenshot';
 import { RegisterAccountTA } from './TA/TestSetup';
-import BlogData from '@resources/data/TestArchitect/BlogPage.json';
+import BlogData from '@testUI/resources/data/TestArchitect/BlogPage.json';
 
 let page: Page;
 let context: BrowserContext;

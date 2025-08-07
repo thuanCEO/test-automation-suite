@@ -1,9 +1,9 @@
 import { test, BrowserContext, Page, expect } from '@playwright/test';
-import { TestArchitectPage } from '../../../pages/TestArchitect/ArchitectPages';
-import { ShopPage } from '../../../pages/TestArchitect/ShopPage';
-import { SaveScreenshot } from '../../../utils/SaveScreenshot';
+import { TestArchitectPage } from '@testUI/pages/TestArchitect/ArchitectPages';
+import { ShopPage } from '@testUI/pages/TestArchitect/ShopPage';
+import { SaveScreenshot } from '@utils/SaveScreenshot';
 import { RegisterAccountTA } from './TA/TestSetup';
-import ShopPageTA from '@resources/data/TestArchitect/ShopPage.json';
+import ShopPageTA from '@testUI/resources/data/TestArchitect/ShopPage.json';
 
 let page: Page;
 let context: BrowserContext;

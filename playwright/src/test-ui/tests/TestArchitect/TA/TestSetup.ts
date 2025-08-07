@@ -1,6 +1,6 @@
 import { Browser, Page } from '@playwright/test';
-import { TestArchitectPage } from '../../../../pages/TestArchitect/ArchitectPages';
-import { LoginPage } from '../../../../pages/TestArchitect/LoginPage';
+import { TestArchitectPage } from '@testUI/pages/TestArchitect/ArchitectPages';
+import { LoginPage } from '@testUI/pages/TestArchitect/LoginPage';
 
 export async function RegisterAccountTA(browser: Browser): Promise<Page> {
   const context = await browser.newContext();

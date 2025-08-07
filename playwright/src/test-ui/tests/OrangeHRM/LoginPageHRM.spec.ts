@@ -1,8 +1,8 @@
 import { test, BrowserContext, Page, expect } from '@playwright/test';
-import { LoginPageHRM } from '../../pages/OrangeHRM/LoginPageHRM';
-import { UserData } from '../../resources/data/OrangeHRM/UserData'
-import { Project } from '@resources/Project';
-import { SaveScreenshot } from '../../utils/SaveScreenshot';
+import { LoginPageHRM } from '@testUI/pages/OrangeHRM/LoginPageHRM';
+import { UserData } from '@testUI/resources/data/OrangeHRM/UserData';
+import { Project } from '@testUI/resources/Project';
+import { SaveScreenshot } from '@utils/SaveScreenshot';
 
 let context: BrowserContext;
 let page: Page;
