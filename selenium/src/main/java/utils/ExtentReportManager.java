@@ -9,7 +9,7 @@ public class ExtentReportManager {
     public static ExtentReports getInstance() {
         if (extent == null) {
             // Dùng Spark reporter thay vì HTML reporter
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("test-output/ExtentReport.html");
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter("src/test/java/reports/test-output/ExtentReport.html");
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
         }
