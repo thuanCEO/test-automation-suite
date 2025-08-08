@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="SeleniumSuite">
     <listeners>
-        <listener class-name="utils.AllureListener" />
+        <listener class-name="utils.AllureListenerRunner" />
     </listeners>
 
     <test name="RegisterAccount">
