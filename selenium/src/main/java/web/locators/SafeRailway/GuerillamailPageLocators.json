@@ -1,0 +1,7 @@
+{
+  "inputEmailWidget": "//span[@id='email-widget']",
+  "inputCheckBox": "//span//input[@id='use-alias']",
+  "tableEmailList": "//table//tbody[@id='email_list']/tr[%s]"
+
+
+}
