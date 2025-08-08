@@ -1,4 +1,4 @@
-# test-automation-suite
+# Test-automation-suite
 - Multifunctional Test Automation Suite — UI, API, Performance, and Mobile Testing in one place using Selenium, Playwright, Karate, Appium, JMeter, and more
 
 # Run playwright test-api 
