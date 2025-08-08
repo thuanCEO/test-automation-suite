@@ -14,4 +14,9 @@
             <class name="tests.web.Selenium.SeleniumDocTest"/>
         </classes>
     </test>
+    <test name="MockUserAPI">
+        <classes>
+            <class name="tests.api.MockAPI.MockUserAPI"/>
+        </classes>
+    </test>
 </suite>

@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ScreenshotUtils {
-    private static final String SCREENSHOT_DIR = "src/test/reports/screenshots/";
+    private static final String SCREENSHOT_DIR = "src/test/java/reports/screenshots/";
 
     public static String takeScreenshot(String testName) {
         WebDriver driver = DriverFactory.getDriver();
