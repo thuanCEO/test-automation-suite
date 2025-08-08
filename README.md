@@ -1,17 +1,17 @@
 # test-automation-suite
- Multifunctional Test Automation Suite — UI, API, Performance, and Mobile Testing in one place using Selenium, Playwright, Karate, Appium, JMeter, and more
+- Multifunctional Test Automation Suite — UI, API, Performance, and Mobile Testing in one place using Selenium, Playwright, Karate, Appium, JMeter, and more
 
 # Run playwright test-api 
-npx playwright test --project=test-api
+- npx playwright test --project=test-api
 
 # Run playwright test-api with @tag
-npx playwright test --project=test-api --grep="@UserAPI"
+- npx playwright test --project=test-api --grep="@UserAPI"
 
 # Run playwright test-ui
-npx playwright test --project=test-ui
+- npx playwright test --project=test-ui
 
 # Run playwright test-ui with @tag
-npx playwright test --project=test-ui --grep="@LoginPageHRM"
+- npx playwright test --project=test-ui --grep="@LoginPageHRM"
 
 # Run selenium allure-report
 - allure generate target/allure-results --clean -o target/allure-report
