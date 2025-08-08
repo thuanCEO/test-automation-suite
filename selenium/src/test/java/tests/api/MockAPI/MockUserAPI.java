@@ -8,6 +8,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utils.LogUtils;
@@ -19,13 +21,17 @@ import java.util.concurrent.ThreadLocalRandom;
 public class MockUserAPI {
     public UserService userService;
 
-
     @BeforeClass
     public void setup() {
         String mockApiUrl = BaseUrl.MockAPI;
         HttpClientWrapper httpClient = new HttpClientWrapper(mockApiUrl);
         userService = new UserService(httpClient);
         LogUtils.info("✅ Initialized UserService with baseURL: " + mockApiUrl);
+    }
+
+    @AfterClass
+    public void afterSuite() {
+        utils.AllureReportUtils.generateAndOpenAllureReport();
     }
 
     @Test(description = "Get All Users")
@@ -46,11 +52,16 @@ public class MockUserAPI {
     @Severity(SeverityLevel.CRITICAL)
     @Story("GET /user/{id}")
     public void testGetUserById() {
-        String testUserId = "1";
-        UserDTO user = userService.GetUserById(testUserId);
+        List<UserDTO> users = userService.GetAllUser();
+        Assert.assertFalse(users.isEmpty(), "User list should not be empty");
+        int randomIndex = ThreadLocalRandom.current().nextInt(users.size());
+        UserDTO userToBeGet = users.get(randomIndex);
+        String userId = userToBeGet.getUserId();
+
+        UserDTO user = userService.GetUserById(userId);
         LogUtils.info("⬅️ Received response: " + user);
         Assert.assertNotNull(user, "User should not be null");
-        Assert.assertEquals(user.getUserId(), testUserId, "User ID should match");
+        Assert.assertEquals(user.getUserId(), userId, "User ID should match");
         LogUtils.info("✅ Test passed: User info = " + user.getUserName());
     }
 
@@ -107,4 +118,6 @@ public class MockUserAPI {
         LogUtils.info("✅ Deleted user: " + deletedUser);
         Assert.assertEquals(deletedUser.getUserId(), userId, "Deleted user ID should match");
     }
+
+
 }

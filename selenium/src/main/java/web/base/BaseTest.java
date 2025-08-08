@@ -65,4 +65,9 @@ public class BaseTest {
     public void flushReport() {
         extent.flush();
     }
+
+    @AfterSuite
+    public void afterSuite() {
+        utils.AllureReportUtils.generateAndOpenAllureReport();
+    }
 }

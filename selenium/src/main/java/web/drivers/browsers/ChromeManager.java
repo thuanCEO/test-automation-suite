@@ -6,10 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import web.config.ConfigManager;
 import web.drivers.factory.DriverManager;
 
-import java.time.Duration;
-
 import static web.constants.ConfigKeys.HEADLESS;
-import static web.constants.TimeoutConstants.IMPLICIT_WAIT_MS;
 
 public class ChromeManager extends DriverManager {
     @Override
