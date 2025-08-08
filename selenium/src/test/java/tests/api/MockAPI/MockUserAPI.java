@@ -65,8 +65,6 @@ public class MockUserAPI {
         newUser.setUserPhone("0123456789");
         newUser.setUserBir(System.currentTimeMillis());
         newUser.setActive(true);
-        // newUser.setUserSubject(...) nếu cần
-
         UserDTO createdUser = userService.CreateUser(newUser);
 
         LogUtils.info("✅ Created user: " + createdUser);
@@ -88,7 +86,6 @@ public class MockUserAPI {
         updatedInfo.setUserId(userId);
         updatedInfo.setUserName("Updated Name");
         updatedInfo.setUserAddress("HCM");
-
         UserDTO updatedUser = userService.UpdateUserById(userId, updatedInfo);
 
         LogUtils.info("✅ Updated user: " + updatedUser);
