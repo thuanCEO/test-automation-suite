@@ -13,6 +13,9 @@ npx playwright test --project=test-ui
 # Run playwright test-ui with @tag
 npx playwright test --project=test-ui --grep="@LoginPageHRM"
 
+# Run selenium allure-report
+allure generate target/allure-results --clean -o target/allure-report
+allure open target/allure-report
 
 # 🔹 Web Automation
 - Playwright
