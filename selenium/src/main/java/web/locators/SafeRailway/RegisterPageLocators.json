@@ -1,0 +1,7 @@
+{
+  "inputEmail": "//li[@class='email']//input",
+  "inputPassword": "//li[@class='password']//input",
+  "inputConfirmPassword": "//li[@class='confirm-password']//input",
+  "inputPID": "//li[@class='pid-number']//input",
+  "buttonRegister": "//input[@type='submit']"
+}

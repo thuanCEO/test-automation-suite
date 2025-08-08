@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SeleniumSuite">
+    <listeners>
+        <listener class-name="utils.AllureListener" />
+    </listeners>
+
+    <test name="RegisterAccount">
+        <classes>
+            <class name="tests.web.SafeRailway.RegisterAccount"/>
+        </classes>
+    </test>
+    <test name="SeleniumDocTest">
+        <classes>
+            <class name="tests.web.Selenium.SeleniumDocTest"/>
+        </classes>
+    </test>
+</suite>
